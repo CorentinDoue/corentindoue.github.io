@@ -4,31 +4,44 @@
         <meta charset="UTF-8">
         <title>Home</title>
         <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     </head>
     <body>
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">Lights and ringers controller</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="buildings.html">Buildings</a></li>
-            <li><a href="rooms.html">Rooms</a></li>
-          </ul>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">My projects</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Lights_and_ringer_controller/index.html">Lights and ringers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="PhillipsHue/index.html">PhillipsHue</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-
-      <div class="container">
+    </nav>
+    <br>
+    <div class="container">
         <h3>Home</h3>
         <br />
         <br />
-        <p>This is the website create to manage the lights and the ringers of buildings compose of rooms</p>
-      </div>
+        <p>Welcome to my website, here are the projects I worked on :</p>
+        <ul>
+            <li>
+                <a href="Lights_and_ringer_controller/index.html">Lights and ringers</a>
+            </li>
+            <li>
+                <a href="PhillipsHue/index.html">PhillipsHue</a>
+            </li>
+        </ul>
+    </div>
 
     </body>
 </html>
