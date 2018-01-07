@@ -1,14 +1,19 @@
 var app = new Vue({
   el: '#app',
   data: {
-    buildings: []
+    light: {
+        on: true,
+        sat: 0,
+        bri: 0,
+        hue: 0
+    }
   },
   methods: {
-    getbuildings: function () {
-      axios.get('https://secret-chamber-54105.herokuapp.com/api/buildings')
+    getlight: function () {
+      axios.get('https://phillipshue.herokuapp.com/api/lights/10')
       //axios.get('http://localhost:8080/api/buildings')
       .then(function (response) {
-        app.buildings=response.data;
+        app.light=response.data;
       })
       .catch(function (error) {
         console.log(error);
@@ -16,6 +21,6 @@ var app = new Vue({
     }
   },
   mounted: function (){
-    this.getbuildings();
+    this.getlight();
   }
 })
