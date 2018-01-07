@@ -3,12 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <title>Rooms display</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
+      <!-- Navigation Bar-->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Lights and ringers controller</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buildings.html">Buildings</a></li>
+            <li class="active"><a href="rooms.html">Rooms</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Page -->
       <div id="app" class="container">
+        <!-- Title of the page -->
         <h3 class="text-center">List of Rooms</h3>
+
+        <!-- List of Rooms -->
         <table class="table">
           <thead>
             <tr>
@@ -50,6 +70,8 @@
           </tbody>
         </table>
         <button v-if="!newRoomForm" v-on:click="initNewRoom()">Add a new Room</button>
+
+        <!-- New Room -->
         <div v-if="newRoomForm">
           <table class="table">
             <thead>
