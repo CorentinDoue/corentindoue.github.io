@@ -255,7 +255,7 @@ var app = new Vue({
               app.light.hue=Math.round(temp[1]*65536/360);
               app.light.sat=Math.round(temp[2]*255/100);
               if (Math.round(temp[4]*255/100)*2>255){
-                  app.light.bri=Math.round(temp[4]*255/100);
+                  app.light.bri=255;
               }else{
                   app.light.bri=Math.round(temp[4]*255/100)*2;
               }
