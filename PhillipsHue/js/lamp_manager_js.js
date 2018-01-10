@@ -208,11 +208,11 @@ var app = new Vue({
                   app.light.on=!app.light.on;
               }else{
                   if (topic === 'lumTopic'){
-                      app.light.hue=parseInt(new TextDecoder("utf-8").decode(payload))
+                      app.light.hue=parseInt(new TextDecoder("utf-8").decode(payload));
                   }else if (topic === 'satTopic' ){
-                      app.light.sat=parseInt(new TextDecoder("utf-8").decode(payload))
+                      app.light.sat=parseInt(new TextDecoder("utf-8").decode(payload));
                   }else if (topic === 'briTopic'){
-                      app.light.bri=parseInt(new TextDecoder("utf-8").decode(payload))
+                      app.light.bri=parseInt(new TextDecoder("utf-8").decode(payload));
                   }
                   app.BuildColor();
               }
@@ -222,7 +222,7 @@ var app = new Vue({
        * @return {string}
        */
       BuildColor:function () {
-          app.bgc.backgroundColor= app.colorcolor("hsl("+Math.round(app.light.hue*360/65536)+", "+Math.round(app.light.sat*100/255)+"%, "+Math.round(app.light.bri*100/255)+"%)", "hex", false);
+          app.bgc.backgroundColor= app.colorcolor("hsl("+Math.round(app.light.hue*360/65536)+", "+Math.round(app.light.sat*100/255)+"%, "+Math.round(app.light.bri*100/510)+"%)", "hex", false);
       },
       switchLight: function(){
           axios.post('https://phillipshue.herokuapp.com/api/lights/10/switch')
@@ -254,7 +254,12 @@ var app = new Vue({
               var temp = app.colorcolor(app.bgc.backgroundColor,'hsl', false).split(delims);
               app.light.hue=Math.round(temp[1]*65536/360);
               app.light.sat=Math.round(temp[2]*255/100);
-              app.light.bri=Math.round(temp[4]*255/100);
+              if (Math.round(temp[4]*255/100)*2>255){
+                  app.light.bri=Math.round(temp[4]*255/100);
+              }else{
+                  app.light.bri=Math.round(temp[4]*255/100)*2;
+              }
+
               axios({
                   method: 'post',
                   url: 'https://phillipshue.herokuapp.com/api/lights/10/color',
