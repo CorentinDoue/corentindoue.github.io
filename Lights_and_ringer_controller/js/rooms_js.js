@@ -70,6 +70,7 @@ var app = new Vue({
       Vue.set(app.newRoom.noise, 'id', maxNoise+1);
       Vue.set(app.newRoom.noise, 'status', "ON");
       Vue.set(app.newRoom.noise, 'level', 10);
+      Vue.set(app.newRoom, 'name', "new name");
 
       this.newRoomForm=true;
     },

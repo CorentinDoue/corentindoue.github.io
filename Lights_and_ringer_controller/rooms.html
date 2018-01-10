@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns:v-on="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="UTF-8">
         <title>Rooms display</title>
@@ -60,7 +60,7 @@
               <th scope="col">Noise Level</th>
               <th scope="col">Switch Light</th>
               <th scope="col">Switch Ringer</th>
-              <th scope="col"></th>
+              <!--<th scope="col"></th>-->
             </tr>
           </thead>
           <tbody>
@@ -79,14 +79,14 @@
               </td>
               <td>{{room.noise.level}}</td>
               <td>
-                <button class="btn btn-light" v-on:click="switch_light(room.id)"><img src="img/switch.png" width="20"></button>
+                <button class="btn btn-light" v-on:click="switch_light(room.id)"><img src="img/switch.png" width="20">
+                </button>
+
+                <button class="btn btn-light" v-on:click="switch_noise(room.id)"><img src="img/switch.png" width="20">
+                </button>
               </td>
-              <td>
-                <button class="btn btn-light" v-on:click="switch_noise(room.id)"><img src="img/switch.png" width="20"></button>
-              </td>
-              <td>
-                <button class="btn btn-light" v-on:click="delete_room(room.id)">Delete</button>
-              </td>
+
+
             </tr>
           </tbody>
         </table>
