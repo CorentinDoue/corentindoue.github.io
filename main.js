@@ -62,31 +62,28 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var routes = [
     {
         path: '',
-        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
+        redirectTo: 'about',
+        pathMatch: 'full'
     },
     {
-        path: 'home',
+        path: 'about',
         component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
     },
     {
         path: 'cv',
-        redirectTo: '',
-        pathMatch: 'full'
+        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
     },
     {
         path: 'skills',
-        redirectTo: '',
-        pathMatch: 'full'
+        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
     },
     {
         path: 'projects',
-        redirectTo: '',
-        pathMatch: 'full'
+        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
     },
     {
         path: 'bio',
-        redirectTo: '',
-        pathMatch: 'full'
+        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
     },
     {
         path: 'hobbies',
@@ -121,7 +118,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container>\n\n  <mat-sidenav #sidenav mode=\"push\">\n    <mat-toolbar color=\"primary\" ><span class=\"w-100 text-center\">Corentin Doué</span></mat-toolbar>\n    <mat-nav-list>\n      <a mat-list-item *ngFor=\"let item of navigation\" (click)=\"sidenav.close()\"\n         [routerLink]=\"[item.link]\" routerLinkActive=\"active\">\n        {{item.label}}\n      </a>\n      <a mat-list-item\n         href=\"https://github.com/corentindoue/\"\n         target=\"_blank\">\n        Github\n      </a>\n    </mat-nav-list>\n  </mat-sidenav>\n\n  <div class=\"toolbar\">\n    <mat-toolbar color=\"primary\">\n      <button mat-icon-button class=\"d-md-none\" (click)=\"sidenav.open()\">\n        <mat-icon fontSet=\"fas\" fontIcon=\"fa-bars\"></mat-icon>\n      </button>\n\n\n\n      <span routerLink=\"\" class=\"branding spacer center d-inline d-md-none\">\n        <mat-icon fontSet=\"fas\" fontIcon=\"fa-code-branch\" class=\"d-none d-sm-inline\"></mat-icon>\n        Corentin Doué\n      </span>\n      <span routerLink=\"\" class=\"branding spacer d-none d-md-inline\">\n        <mat-icon fontSet=\"fas\" fontIcon=\"fa-code-branch\"></mat-icon>\n        Corentin Doué\n      </span>\n\n      <span class=\"d-none d-md-inline\">\n          <button mat-button class=\"nav-button\" *ngFor=\"let item of navigation\"\n                  [routerLink]=\"[item.link]\" [ngClass]=\"[item.class]\" routerLinkActive=\"{{item.aclass}}\">\n            {{item.label}}\n          </button>\n        </span>\n    </mat-toolbar>\n  </div>\n\n  <div class=\"wrapper\">\n\n    <div class=\"content\"\n         [@routeAnimations]=\"o.isActivated && o.activatedRoute.routeConfig.path\">\n      <router-outlet #o=\"outlet\"></router-outlet>\n    </div>\n\n    <div class=\"footer\">\n      <div class=\"row\">\n        <div class=\"col-sm-12 links\">\n          <a href=\"https://www.github.com/corentindoue\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-github\"></mat-icon>\n            <span>Github</span>\n          </a>\n          <a href=\"mailto:corentin.doue@etu.emse.fr\" target=\"_blank\">\n            <mat-icon fontSet=\"fas\" fontIcon=\"fa-at\"></mat-icon>\n            <span>corentin.doue@etu.emse.fr</span>\n          </a>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-12 signature\">\n          &#169; <span class=\"year\">{{year}}</span> - Corentin Doué\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n</mat-sidenav-container>\n"
+module.exports = "<mat-sidenav-container>\n\n  <mat-sidenav #sidenav mode=\"push\">\n    <mat-toolbar color=\"primary\" ><span class=\"w-100 text-center\">Corentin Doué</span></mat-toolbar>\n    <mat-nav-list>\n      <a mat-list-item *ngFor=\"let item of navigation\" (click)=\"sidenav.close()\"\n         [routerLink]=\"[item.link]\" routerLinkActive=\"active\">\n        {{item.label}}\n      </a>\n      <a mat-list-item\n         href=\"https://github.com/corentindoue/\"\n         target=\"_blank\">\n        Github\n      </a>\n    </mat-nav-list>\n  </mat-sidenav>\n\n  <div class=\"toolbar\">\n    <mat-toolbar color=\"primary\">\n      <button mat-icon-button class=\"d-md-none\" (click)=\"sidenav.open()\">\n        <mat-icon fontSet=\"fas\" fontIcon=\"fa-bars\"></mat-icon>\n      </button>\n\n\n\n      <span routerLink=\"\" class=\"branding spacer center d-inline d-md-none\">\n        <mat-icon fontSet=\"fas\" fontIcon=\"fa-code-branch\" class=\"d-none d-sm-inline\"></mat-icon>\n        Corentin Doué\n      </span>\n      <span routerLink=\"\" class=\"branding spacer d-none d-md-inline\">\n        <mat-icon fontSet=\"fas\" fontIcon=\"fa-code-branch\"></mat-icon>\n        Corentin Doué\n      </span>\n\n      <span class=\"d-none d-md-inline\">\n          <button mat-button class=\"nav-button\" *ngFor=\"let item of navigation\"\n                  [routerLink]=\"[item.link]\" routerLinkActive=\"active\">\n            {{item.label}}\n          </button>\n        </span>\n    </mat-toolbar>\n  </div>\n\n  <div class=\"wrapper\">\n\n    <div class=\"content\"\n         [@routeAnimations]=\"o.isActivated && o.activatedRoute.routeConfig.path\">\n      <router-outlet #o=\"outlet\"></router-outlet>\n    </div>\n\n    <div class=\"footer\">\n      <div class=\"row\">\n        <div class=\"col-sm-12 links\">\n          <a href=\"https://www.github.com/corentindoue\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-github\"></mat-icon>\n            <span>Github</span>\n          </a>\n          <a href=\"mailto:corentin.doue@etu.emse.fr\" target=\"_blank\">\n            <mat-icon fontSet=\"fas\" fontIcon=\"fa-at\"></mat-icon>\n            <span>corentin.doue@etu.emse.fr</span>\n          </a>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-12 signature\">\n          &#169; <span class=\"year\">{{year}}</span> - Corentin Doué\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n</mat-sidenav-container>\n"
 
 /***/ }),
 
@@ -132,7 +129,7 @@ module.exports = "<mat-sidenav-container>\n\n  <mat-sidenav #sidenav mode=\"push
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-sidenav-container {\n  height: 100%;\n  width: 100%; }\n  mat-sidenav-container .toolbar {\n    position: fixed;\n    width: 100%;\n    display: flex; }\n  mat-sidenav-container .toolbar mat-toolbar {\n      height: 50px; }\n  mat-sidenav-container .toolbar mat-toolbar button {\n        height: 50px; }\n  mat-sidenav-container .toolbar mat-toolbar .branding {\n        font-size: 1.2em;\n        font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\"; }\n  mat-sidenav-container .toolbar mat-toolbar .R:hover {\n        background: #E70000; }\n  mat-sidenav-container .toolbar mat-toolbar .aR {\n        background: #E70000; }\n  mat-sidenav-container .toolbar mat-toolbar .O:hover {\n        background: #FF8C00; }\n  mat-sidenav-container .toolbar mat-toolbar .aO {\n        background: #FF8C00; }\n  mat-sidenav-container .toolbar mat-toolbar .Y:hover {\n        background: #FFEF00;\n        color: black; }\n  mat-sidenav-container .toolbar mat-toolbar .aY {\n        background: #FFEF00;\n        color: black; }\n  mat-sidenav-container .toolbar mat-toolbar .G:hover {\n        background: #00811F; }\n  mat-sidenav-container .toolbar mat-toolbar .aG {\n        background: #00811F; }\n  mat-sidenav-container .toolbar mat-toolbar .B:hover {\n        background: #0044FF; }\n  mat-sidenav-container .toolbar mat-toolbar .aB {\n        background: #0044FF; }\n  mat-sidenav-container .toolbar mat-toolbar .V:hover {\n        background: #760089; }\n  mat-sidenav-container .toolbar mat-toolbar .aV {\n        background: #760089; }\n  mat-sidenav-container .toolbar .nav-button {\n      margin: 0 10px 0 0; }\n  mat-sidenav-container .toolbar mat-icon {\n      font-size: 24px; }\n  mat-sidenav-container .toolbar .branding {\n      cursor: pointer;\n      padding-top: 4px; }\n  mat-sidenav-container .toolbar .branding.center {\n        text-align: center; }\n  mat-sidenav-container .toolbar .branding img {\n        position: relative;\n        top: -2px;\n        width: 48px;\n        height: 48px; }\n  mat-sidenav-container .toolbar .sign-in-button {\n      line-height: 35px;\n      margin-right: 10px; }\n  mat-sidenav-container .toolbar .spacer {\n      flex: 1 1 auto; }\n  @media (max-width: 992px) {\n      mat-sidenav-container .toolbar .nav-button {\n        min-width: 0;\n        padding: 0 10px; }\n      mat-sidenav-container .toolbar .sign-in-button {\n        min-width: 0;\n        padding: 0 10px;\n        margin: 0 5px 0 0; } }\n  mat-sidenav-container .wrapper {\n    position: absolute;\n    top: 50px;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    display: flex;\n    flex-direction: column;\n    overflow-y: auto;\n    overflow-x: hidden; }\n  mat-sidenav-container .wrapper .content {\n      position: relative;\n      flex: 1 0 auto; }\n  mat-sidenav-container .wrapper .footer {\n      flex: 0 0 auto;\n      padding: 0 15px;\n      text-align: center; }\n  mat-sidenav-container .wrapper .footer .row {\n        padding: 10px 0; }\n  mat-sidenav-container .wrapper .footer .row .links a {\n          transition: padding 0.5s;\n          display: inline-block;\n          padding: 20px 5px; }\n  mat-sidenav-container .wrapper .footer .row .links a:hover {\n            text-decoration: none; }\n  mat-sidenav-container .wrapper .footer .row .links a mat-icon {\n            font-size: 30px;\n            width: 35px; }\n  mat-sidenav-container .wrapper .footer .row .links a span {\n            display: inline-block;\n            padding: 0 0 0 3px;\n            overflow: hidden;\n            text-align: left;\n            white-space: nowrap;\n            transition: width 0.5s; }\n  @media (min-width: 992px) {\n          mat-sidenav-container .wrapper .footer .row .links a {\n            padding: 20px 10px; } }\n  @media (max-width: 768px) {\n          mat-sidenav-container .wrapper .footer .row .links a {\n            padding: 20px; }\n            mat-sidenav-container .wrapper .footer .row .links a span {\n              width: 0;\n              padding: 0; } }\n  @media (max-width: 576px) {\n          mat-sidenav-container .wrapper .footer .row .links a {\n            padding: 20px 5px; } }\n  @media (min-width: 576px) {\n          mat-sidenav-container .wrapper .footer .row .signature {\n            position: relative; }\n            mat-sidenav-container .wrapper .footer .row .signature a {\n              position: absolute;\n              right: 15px; } }\n  @media (max-width: 576px) {\n    mat-sidenav-container .wrapper {\n      top: 50px; } }\n  mat-sidenav {\n  width: 250px; }\n  mat-sidenav .branding {\n    height: 64px;\n    padding: 8px 10px;\n    font-size: 20px;\n    font-weight: 500; }\n  mat-sidenav .branding img {\n      height: 48px;\n      margin: 2px 10px 0 0; }\n  mat-sidenav .branding span {\n      position: relative;\n      top: 3px; }\n  mat-sidenav .mat-nav-list {\n    padding-top: 0; }\n"
+module.exports = "mat-sidenav-container {\n  height: 100%;\n  width: 100%; }\n  mat-sidenav-container .toolbar {\n    position: fixed;\n    width: 100%;\n    display: flex; }\n  mat-sidenav-container .toolbar mat-toolbar .branding {\n      font-size: 1.2em;\n      font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"; }\n  mat-sidenav-container .toolbar .nav-button {\n      margin: 0 10px 0 0; }\n  mat-sidenav-container .toolbar mat-icon {\n      font-size: 24px; }\n  mat-sidenav-container .toolbar .branding {\n      cursor: pointer;\n      padding-top: 4px; }\n  mat-sidenav-container .toolbar .branding.center {\n        text-align: center; }\n  mat-sidenav-container .toolbar .branding img {\n        position: relative;\n        top: -2px;\n        width: 48px;\n        height: 48px; }\n  mat-sidenav-container .toolbar .sign-in-button {\n      line-height: 35px;\n      margin-right: 10px; }\n  mat-sidenav-container .toolbar .spacer {\n      flex: 1 1 auto; }\n  @media (max-width: 992px) {\n      mat-sidenav-container .toolbar .nav-button {\n        min-width: 0;\n        padding: 0 10px; }\n      mat-sidenav-container .toolbar .sign-in-button {\n        min-width: 0;\n        padding: 0 10px;\n        margin: 0 5px 0 0; } }\n  mat-sidenav-container .wrapper {\n    position: absolute;\n    top: 64px;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    display: flex;\n    flex-direction: column;\n    overflow-y: auto;\n    overflow-x: hidden; }\n  mat-sidenav-container .wrapper .content {\n      position: relative;\n      flex: 1 0 auto; }\n  mat-sidenav-container .wrapper .footer {\n      flex: 0 0 auto;\n      padding: 0 15px;\n      text-align: center; }\n  mat-sidenav-container .wrapper .footer .row {\n        padding: 10px 0; }\n  mat-sidenav-container .wrapper .footer .row .links a {\n          transition: padding 0.5s;\n          display: inline-block;\n          padding: 20px 5px; }\n  mat-sidenav-container .wrapper .footer .row .links a:hover {\n            text-decoration: none; }\n  mat-sidenav-container .wrapper .footer .row .links a mat-icon {\n            font-size: 30px;\n            width: 35px; }\n  mat-sidenav-container .wrapper .footer .row .links a span {\n            display: inline-block;\n            padding: 0 0 0 3px;\n            overflow: hidden;\n            text-align: left;\n            white-space: nowrap;\n            transition: width 0.5s; }\n  @media (min-width: 992px) {\n          mat-sidenav-container .wrapper .footer .row .links a {\n            padding: 20px 10px; } }\n  @media (max-width: 768px) {\n          mat-sidenav-container .wrapper .footer .row .links a {\n            padding: 20px; }\n            mat-sidenav-container .wrapper .footer .row .links a span {\n              width: 0;\n              padding: 0; } }\n  @media (max-width: 576px) {\n          mat-sidenav-container .wrapper .footer .row .links a {\n            padding: 20px 5px; } }\n  @media (min-width: 576px) {\n          mat-sidenav-container .wrapper .footer .row .signature {\n            position: relative; }\n            mat-sidenav-container .wrapper .footer .row .signature a {\n              position: absolute;\n              right: 15px; } }\n  @media (max-width: 576px) {\n    mat-sidenav-container .wrapper {\n      top: 50px; } }\n  mat-sidenav {\n  width: 250px; }\n  mat-sidenav .branding {\n    height: 64px;\n    padding: 8px 10px;\n    font-size: 20px;\n    font-weight: 500; }\n  mat-sidenav .branding img {\n      height: 48px;\n      margin: 2px 10px 0 0; }\n  mat-sidenav .branding span {\n      position: relative;\n      top: 3px; }\n  mat-sidenav .mat-nav-list {\n    padding-top: 0; }\n"
 
 /***/ }),
 
@@ -148,9 +145,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _core_animations_route_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./core/animations/route.animations */ "./src/app/core/animations/route.animations.ts");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/overlay */ "./node_modules/@angular/cdk/esm5/overlay.es5.js");
+/* harmony import */ var browser_detect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! browser-detect */ "./node_modules/browser-detect/dist/browser-detect.es5.js");
+/* harmony import */ var _core_animations_animations_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./core/animations/animations.service */ "./src/app/core/animations/animations.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -166,43 +163,60 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent(router, titleService) {
-        this.router = router;
-        this.titleService = titleService;
-        this.unsubscribe$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Subject"]();
+    function AppComponent(overlayContainer, animationService) {
+        this.overlayContainer = overlayContainer;
+        this.animationService = animationService;
         this.year = new Date().getFullYear();
-        this.logo = '../assets/logo.png';
         this.navigation = [
-            { link: 'home', label: 'Home', class: 'R', aclass: 'aR' },
-            { link: 'cv', label: 'Curriculum vitae', class: 'O', aclass: 'aO' },
-            { link: 'skills', label: 'Skills', class: 'Y', aclass: 'aY' },
-            { link: 'projects', label: 'Projects', class: 'G', aclass: 'aG' },
-            { link: 'bio', label: 'Biography', class: 'B', aclass: 'aB' },
-            { link: 'hobbies', label: 'Hobbies', class: 'V', aclass: 'aV' }
+            { link: 'about', label: 'About' },
+            { link: 'cv', label: 'Curriculum vitae' },
+            { link: 'skills', label: 'Skills' },
+            { link: 'projects', label: 'Projects' },
+            { link: 'bio', label: 'Biography' },
+            { link: 'hobbies', label: 'Hobbies' }
         ];
     }
-    // private static trackPageView(event: NavigationEnd) {
-    //   (<any>window).ga('set', 'page', event.urlAfterRedirects);
-    //   (<any>window).ga('send', 'pageview');
-    // }
+    AppComponent_1 = AppComponent;
+    AppComponent.isIEorEdge = function () {
+        return ['ie', 'edge'].includes(Object(browser_detect__WEBPACK_IMPORTED_MODULE_3__["default"])().name);
+    };
     AppComponent.prototype.ngOnInit = function () {
-        //  this.subscribeToRouterEvents();
+        this.initTheme();
+        if (AppComponent_1.isIEorEdge()) {
+            this.animationService.updateRouteAnimationType(false, true);
+        }
     };
-    AppComponent.prototype.ngOnDestroy = function () {
-        this.unsubscribe$.next();
-        this.unsubscribe$.complete();
+    AppComponent.prototype.initTheme = function () {
+        var hours = new Date().getHours();
+        var effectiveTheme = ((hours >= 20 || hours <= 6)
+            ? 'night-theme'
+            : 'day-theme');
+        this.componentCssClass = effectiveTheme;
+        var classList = this.overlayContainer.getContainerElement().classList;
+        var toRemove = Array.from(classList).filter(function (item) {
+            return item.includes('-theme');
+        });
+        if (toRemove.length) {
+            classList.remove.apply(classList, toRemove);
+        }
+        classList.add(effectiveTheme);
     };
-    AppComponent = __decorate([
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"])('class'),
+        __metadata("design:type", Object)
+    ], AppComponent.prototype, "componentCssClass", void 0);
+    AppComponent = AppComponent_1 = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'spc-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")],
             animations: [_core_animations_route_animations__WEBPACK_IMPORTED_MODULE_1__["routeAnimations"]]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"]])
+        __metadata("design:paramtypes", [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_2__["OverlayContainer"],
+            _core_animations_animations_service__WEBPACK_IMPORTED_MODULE_4__["AnimationsService"]])
     ], AppComponent);
     return AppComponent;
+    var AppComponent_1;
 }());
 
 
@@ -308,7 +322,7 @@ var AnimationsService = /** @class */ (function () {
                 ? 'ALL'
                 : pageAnimations ? 'PAGE' : elementsAnimations ? 'ELEMENTS' : 'NONE';
     };
-    AnimationsService.routeAnimationType = 'NONE';
+    AnimationsService.routeAnimationType = 'ALL';
     AnimationsService = AnimationsService_1 = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [])
@@ -457,7 +471,7 @@ var CoreModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--<img src=\"../../assets/abstract-wallpaper.png\" style=\"width: 100%\">-->\n<div class=\"background\">\n  <div class=\"gradient\">\n    <div class=\"container\">\n      <h1>Home works !</h1>\n      <p>ajfb kxfh  zeku fex  aKFXJ BEF QX BFIFUBX BX IEUBXKX XKXJBEFX KZEUX HKXU ZOE  EUX?AWE ?XEQZN BBZ   GIDJDHFHF SGGSGSFD <br>\n        jdsfbfkqxnhx djjhff vbbbf fhhh g  einjsjfsxnxbsjdx,nsjnkdbvbbbc fggsf x fhfhhf dd  djenxqkzeqc zecnbxez  uv</p>\n      <p>ajfb kxfh  zeku fex  aKFXJ BEF QX BFIFUBX BX IEUBXKX XKXJBEFX KZEUX HKXU ZOE  EUX?AWE ?XEQZN BBZ   GIDJDHFHF SGGSGSFD <br>\n        jdsfbfkqxnhx djjhff vbbbf fhhh g  einjsjfsxnxbsjdx,nsjnkdbvbbbc fggsf x fhfhhf dd  djenxqkzeqc zecnbxez  uv</p>\n      <p>ajfb kxfh  zeku fex  aKFXJ BEF QX BFIFUBX BX IEUBXKX XKXJBEFX KZEUX HKXU ZOE  EUX?AWE ?XEQZN BBZ   GIDJDHFHF SGGSGSFD <br>\n        jdsfbfkqxnhx djjhff vbbbf fhhh g  einjsjfsxnxbsjdx,nsjnkdbvbbbc fggsf x fhfhhf dd  djenxqkzeqc zecnbxez  uv</p>\n      <p>ajfb kxfh  zeku fex  aKFXJ BEF QX BFIFUBX BX IEUBXKX XKXJBEFX KZEUX HKXU ZOE  EUX?AWE ?XEQZN BBZ   GIDJDHFHF SGGSGSFD <br>\n        jdsfbfkqxnhx djjhff vbbbf fhhh g  einjsjfsxnxbsjdx,nsjnkdbvbbbc fggsf x fhfhhf dd  djenxqkzeqc zecnbxez  uv</p>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<!--<img src=\"../../assets/abstract-wallpaper.png\" style=\"width: 100%\">-->\n<div [ngClass]=\"componentTheme\">\n  <div class=\"background\">\n    <div class=\"gradient\">\n      <div class=\"container\">\n        <div class=\"centrer\">\n          <div><h1 [ngClass]=\"routeAnimationsElements\">About Me</h1></div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"container\">\n    <p [ngClass]=\"routeAnimationsElements\">\n      I am a french engineering student at <a href=\"https://www.mines-stetienne.fr/\">Mines Saint-Etienne</a>.\n      I majored in Computer Sciences and Artificial Intelligence during the past year.\n      For my last year before graduation, I am going to major in Data Sciences and Big Data.\n    </p>\n    <p [ngClass]=\"routeAnimationsElements\">\n      In parallel with my courses, I have most of the time a web development project. To achieve them, I take a lot of MOOCs and read many articles.\n      That is why I acquired plenty of skills. <a class=\"more\" routerLink=\"/skills\">Learn more ...</a>\n    </p>\n    <p [ngClass]=\"routeAnimationsElements\">\n      The engineering school makes me also discover the student's associations.\n      I spend the last year in three Executive Committee of associations including the Student Union of the school.\n      It learns me a lot about team management and commitment.\n    </p>\n    <p [ngClass]=\"routeAnimationsElements\">\n      Moreover I find time for my hobbies. I run at least ones a week. I regularly practise also climbing and skiing. I enjoy cooking too.\n    </p>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -468,7 +482,7 @@ module.exports = "<!--<img src=\"../../assets/abstract-wallpaper.png\" style=\"w
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1 {\n  text-align: center;\n  font-size: 3em;\n  text-transform: uppercase; }\n\n.background {\n  padding: 80px 0 0 0;\n  position: relative;\n  min-height: 100%; }\n\n.background::before {\n    position: absolute;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    background: url('abstract-wallpaper.png') no-repeat center top;\n    background-size: cover;\n    opacity: 0.7;\n    content: '';\n    z-index: 0; }\n\n.background .gradient::before {\n    position: absolute;\n    top: 50%;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    content: '';\n    z-index: 0; }\n\n.background .container {\n    position: relative; }\n"
+module.exports = "p {\n  font-size: 1.5em;\n  text-align: justify; }\n  p a {\n    text-decoration: underline; }\n  .background {\n  position: relative; }\n  .background::before {\n    position: absolute;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    background: url('abstract-wallpaper-light.png') no-repeat center top;\n    background-size: cover;\n    opacity: 0.7;\n    content: '';\n    z-index: 0; }\n  .background .gradient::before {\n    position: absolute;\n    top: 50%;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    content: '';\n    z-index: 0; }\n  .background .container {\n    position: relative; }\n  .background .container .centrer {\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      height: 500px; }\n  @media (max-width: 768px) {\n      .background .container .centrer {\n        height: 300px; } }\n  @media (max-width: 576px) {\n      .background .container .centrer {\n        height: 200px; } }\n  .background .container h1 {\n      text-align: center;\n      font-size: 3em;\n      text-transform: uppercase;\n      font-weight: bold;\n      display: inline-block;\n      padding: 20px;\n      background-color: rgba(48, 48, 48, 0.6);\n      color: white;\n      border: solid 2px white; }\n  @media (max-width: 576px) {\n  p {\n    font-size: 1.2em; } }\n"
 
 /***/ }),
 
@@ -483,6 +497,8 @@ module.exports = "h1 {\n  text-align: center;\n  font-size: 3em;\n  text-transfo
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_animations_route_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/animations/route.animations */ "./src/app/core/animations/route.animations.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -493,10 +509,18 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent() {
+    function HomeComponent(router) {
+        this.router = router;
+        this.componentTheme = '';
+        this.routeAnimationsElements = _core_animations_route_animations__WEBPACK_IMPORTED_MODULE_2__["ROUTE_ANIMATIONS_ELEMENTS"];
     }
     HomeComponent.prototype.ngOnInit = function () {
+        if (this.router.url === '/about') {
+            this.componentTheme = 'R-theme';
+        }
     };
     HomeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -504,7 +528,7 @@ var HomeComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/home/home.component.html"),
             styles: [__webpack_require__(/*! ./home.component.scss */ "./src/app/home/home.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], HomeComponent);
     return HomeComponent;
 }());
