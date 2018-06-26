@@ -15,6 +15,14 @@ var map = {
 	"./hobbies/hobbies.module": [
 		"./src/app/hobbies/hobbies.module.ts",
 		"hobbies-hobbies-module"
+	],
+	"./projects/projects.module": [
+		"./src/app/projects/projects.module.ts",
+		"projects-projects-module"
+	],
+	"./skills/skills.module": [
+		"./src/app/skills/skills.module.ts",
+		"skills-skills-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -71,31 +79,33 @@ var routes = [
     },
     {
         path: 'about',
-        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
+        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"],
+        data: { state: 'home' }
     },
     {
         path: 'cv',
-        loadChildren: './cv/cv.module#CvModule'
+        loadChildren: './cv/cv.module#CvModule',
+        data: { state: 'cv' }
     },
     {
         path: 'skills',
-        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
+        loadChildren: './skills/skills.module#SkillsModule',
+        data: { state: 'skills' }
     },
     {
         path: 'projects',
-        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
-    },
-    {
-        path: 'bio',
-        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
+        loadChildren: './projects/projects.module#ProjectsModule',
+        data: { state: 'projects' }
     },
     {
         path: 'hobbies',
-        loadChildren: './hobbies/hobbies.module#HobbiesModule'
+        loadChildren: './hobbies/hobbies.module#HobbiesModule',
+        data: { state: 'hobbies' }
     },
     {
         path: '**',
-        component: _not_found_not_found_component__WEBPACK_IMPORTED_MODULE_2__["NotFoundComponent"]
+        component: _not_found_not_found_component__WEBPACK_IMPORTED_MODULE_2__["NotFoundComponent"],
+        data: { state: '404' }
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -122,7 +132,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container>\n\n  <mat-sidenav #sidenav mode=\"push\">\n    <mat-toolbar color=\"primary\" ><span class=\"w-100 text-center\">Corentin Doué</span></mat-toolbar>\n    <mat-nav-list>\n      <a mat-list-item *ngFor=\"let item of navigation\" (click)=\"sidenav.close()\"\n         [routerLink]=\"[item.link]\" routerLinkActive=\"active\">\n        {{item.label}}\n      </a>\n      <a mat-list-item\n         href=\"https://github.com/corentindoue/\"\n         target=\"_blank\">\n        Github\n      </a>\n    </mat-nav-list>\n  </mat-sidenav>\n\n  <div class=\"toolbar\">\n    <mat-toolbar color=\"primary\">\n      <button mat-icon-button class=\"d-md-none\" (click)=\"sidenav.open()\">\n        <mat-icon fontSet=\"fas\" fontIcon=\"fa-bars\"></mat-icon>\n      </button>\n\n\n\n      <span routerLink=\"\" class=\"branding spacer center d-inline d-md-none\">\n        <mat-icon fontSet=\"fas\" fontIcon=\"fa-code-branch\" class=\"d-none d-sm-inline\"></mat-icon>\n        Corentin Doué\n      </span>\n      <span routerLink=\"\" class=\"branding spacer d-none d-md-inline\">\n        <mat-icon fontSet=\"fas\" fontIcon=\"fa-code-branch\"></mat-icon>\n        Corentin Doué\n      </span>\n\n      <span class=\"d-none d-md-inline\">\n          <button mat-button class=\"nav-button\" *ngFor=\"let item of navigation\"\n                  [routerLink]=\"[item.link]\" routerLinkActive=\"active\">\n            {{item.label}}\n          </button>\n        </span>\n    </mat-toolbar>\n  </div>\n\n  <div class=\"wrapper\">\n\n    <div class=\"content\"\n         [@routeAnimations]=\"o.isActivated && o.activatedRoute.routeConfig.path\">\n      <router-outlet #o=\"outlet\"></router-outlet>\n    </div>\n\n    <div class=\"footer\">\n      <div class=\"row\">\n        <div class=\"col-sm-12 links\">\n          <a href=\"https://www.github.com/corentindoue\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-linkedin-in\"></mat-icon>\n            <span>Linkedin</span>\n          </a>\n          <a href=\"https://www.github.com/corentindoue\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-github\"></mat-icon>\n            <span>Github</span>\n          </a>\n          <a href=\"mailto:corentin.doue@etu.emse.fr\" target=\"_blank\">\n            <mat-icon fontSet=\"fas\" fontIcon=\"fa-at\"></mat-icon>\n            <span>corentin.doue@etu.emse.fr</span>\n          </a>\n          <a href=\"tel:+33602389814\">\n            <mat-icon fontSet=\"fas\" fontIcon=\"fa-phone\"></mat-icon>\n            <span>+33 (0)6023 89814</span>\n          </a>\n          <a href=\"https://goo.gl/maps/c2GonWtoTEv\" target=\"_blank\" matTooltip=\"20 Bd Alexandre de Fraissinette 42100 Saint-Etienne (France)\">\n            <mat-icon fontSet=\"fas\" fontIcon=\"fa-map-marker-alt\"></mat-icon>\n            <span>Saint-Etienne (France)</span>\n          </a>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-12 signature\">\n          &#169; <span class=\"year\">{{year}}</span> - Corentin Doué\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n</mat-sidenav-container>\n"
+module.exports = "<mat-sidenav-container>\n\n  <mat-sidenav #sidenav mode=\"push\">\n    <mat-toolbar color=\"primary\" ><span class=\"w-100 text-center\">Corentin Doué</span></mat-toolbar>\n    <mat-nav-list>\n      <a mat-list-item *ngFor=\"let item of navigation\" (click)=\"sidenav.close()\"\n         [routerLink]=\"[item.link]\" routerLinkActive=\"active\">\n        {{item.label}}\n      </a>\n      <a mat-list-item\n         href=\"https://github.com/corentindoue/\"\n         target=\"_blank\">\n        Github\n      </a>\n    </mat-nav-list>\n  </mat-sidenav>\n\n  <div class=\"toolbar\">\n    <mat-toolbar color=\"primary\">\n      <button mat-icon-button class=\"d-md-none\" (click)=\"sidenav.open()\">\n        <mat-icon fontSet=\"fas\" fontIcon=\"fa-bars\"></mat-icon>\n      </button>\n\n\n\n      <span routerLink=\"\" class=\"branding spacer center d-inline d-md-none\">\n        <mat-icon fontSet=\"fas\" fontIcon=\"fa-code-branch\" class=\"d-none d-sm-inline\"></mat-icon>\n        Corentin Doué\n      </span>\n      <span routerLink=\"\" class=\"branding spacer d-none d-md-inline\">\n        <mat-icon fontSet=\"fas\" fontIcon=\"fa-code-branch\"></mat-icon>\n        Corentin Doué\n      </span>\n\n      <span class=\"d-none d-md-inline\">\n          <button mat-button class=\"nav-button\" *ngFor=\"let item of navigation\"\n                  [routerLink]=\"[item.link]\" routerLinkActive=\"active\">\n            {{item.label}}\n          </button>\n        </span>\n    </mat-toolbar>\n  </div>\n\n  <div class=\"wrapper\">\n\n    <div class=\"content\"\n         [@routeAnimations]=\"getState(o)\">\n      <router-outlet #o=\"outlet\"></router-outlet>\n    </div>\n\n    <div class=\"footer\">\n      <div class=\"row\">\n        <div class=\"col-sm-12 links\">\n          <a href=\"https://www.linkedin.com/in/corentin-doue\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-linkedin-in\"></mat-icon>\n            <span>Linkedin</span>\n          </a>\n          <a href=\"https://www.github.com/corentindoue\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-github\"></mat-icon>\n            <span>Github</span>\n          </a>\n          <a href=\"mailto:corentin.doue@etu.emse.fr\" target=\"_blank\">\n            <mat-icon fontSet=\"fas\" fontIcon=\"fa-at\"></mat-icon>\n            <span>corentin.doue@etu.emse.fr</span>\n          </a>\n          <a href=\"tel:+33602389814\">\n            <mat-icon fontSet=\"fas\" fontIcon=\"fa-phone\"></mat-icon>\n            <span>+33 (0)6023 89814</span>\n          </a>\n          <a href=\"https://goo.gl/maps/c2GonWtoTEv\" target=\"_blank\" matTooltip=\"20 Bd Alexandre de Fraissinette 42100 Saint-Etienne (France)\">\n            <mat-icon fontSet=\"fas\" fontIcon=\"fa-map-marker-alt\"></mat-icon>\n            <span>Saint-Etienne (France)</span>\n          </a>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-12 signature\">\n          &#169; <span class=\"year\">{{year}}</span> - Corentin Doué\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n</mat-sidenav-container>\n"
 
 /***/ }),
 
@@ -179,7 +189,6 @@ var AppComponent = /** @class */ (function () {
             { link: 'cv', label: 'Curriculum vitae' },
             { link: 'skills', label: 'Skills' },
             { link: 'projects', label: 'Projects' },
-            { link: 'bio', label: 'Biography' },
             { link: 'hobbies', label: 'Hobbies' }
         ];
     }
@@ -207,6 +216,9 @@ var AppComponent = /** @class */ (function () {
             classList.remove.apply(classList, toRemove);
         }
         classList.add(effectiveTheme);
+    };
+    AppComponent.prototype.getState = function (outlet) {
+        return outlet.activatedRouteData.state;
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"])('class'),
@@ -544,7 +556,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  not-found works!\n</p>\n"
+module.exports = "<div class=\"background\">\n  <div class=\"gradient\">\n    <div class=\"container\">\n      <div class=\"centrer\">\n        <div>\n          <h1 [ngClass]=\"routeAnimationsElements\">< / 404 ></h1>\n        </div>\n        <p [ngClass]=\"routeAnimationsElements\">There is nothing here</p>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -555,7 +567,7 @@ module.exports = "<p>\n  not-found works!\n</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".background {\n  position: relative; }\n  .background::before {\n    position: absolute;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    background: url('abstract-wallpaper-light.png') no-repeat center top;\n    background-size: cover;\n    opacity: 0.7;\n    content: '';\n    z-index: 0; }\n  .background .gradient::before {\n    position: absolute;\n    top: 50%;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    content: '';\n    z-index: 0; }\n  .background .container {\n    position: relative; }\n  .background .container .centrer {\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      height: 500px; }\n  .background .container h1 {\n      text-align: center;\n      font-size: 4em;\n      text-transform: uppercase;\n      font-weight: bold;\n      display: inline-block;\n      padding: 20px;\n      background-color: rgba(48, 48, 48, 0.6);\n      color: white;\n      border: solid 2px white; }\n  .background .container p {\n      font-size: 2em;\n      text-align: left;\n      font-weight: bold; }\n  @media (max-width: 768px) {\n      .background .container .centrer {\n        height: 300px; } }\n  @media (max-width: 576px) {\n      .background .container .centrer {\n        height: 300px; }\n      .background .container h1 {\n        font-size: 3em; }\n      .background .container p {\n        font-size: 1em; } }\n"
 
 /***/ }),
 
@@ -570,6 +582,7 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotFoundComponent", function() { return NotFoundComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core_animations_route_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/animations/route.animations */ "./src/app/core/animations/route.animations.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -580,8 +593,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var NotFoundComponent = /** @class */ (function () {
     function NotFoundComponent() {
+        this.routeAnimationsElements = _core_animations_route_animations__WEBPACK_IMPORTED_MODULE_1__["ROUTE_ANIMATIONS_ELEMENTS"];
     }
     NotFoundComponent.prototype.ngOnInit = function () {
     };
