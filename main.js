@@ -202,9 +202,15 @@ var AppComponent = /** @class */ (function () {
     AppComponent.isIEorEdge = function () {
         return ['ie', 'edge', 'ios', 'safari'].includes(Object(browser_detect__WEBPACK_IMPORTED_MODULE_4__["default"])().name);
     };
+    AppComponent.isMobile = function () {
+        return Object(browser_detect__WEBPACK_IMPORTED_MODULE_4__["default"])().mobile;
+    };
+    AppComponent.prototype.getState = function (outlet) {
+        return outlet.activatedRouteData.state;
+    };
     AppComponent.prototype.ngOnInit = function () {
         this.initTheme();
-        if (AppComponent_1.isIEorEdge()) {
+        if (AppComponent_1.isIEorEdge() || AppComponent_1.isMobile()) {
             this.animationService.updateRouteAnimationType(false, true);
         }
         this.initIcon();
@@ -223,9 +229,6 @@ var AppComponent = /** @class */ (function () {
             classList.remove.apply(classList, toRemove);
         }
         classList.add(effectiveTheme);
-    };
-    AppComponent.prototype.getState = function (outlet) {
-        return outlet.activatedRouteData.state;
     };
     AppComponent.prototype.initIcon = function () {
         this.iconReg.addSvgIcon('advanced', this.sanitizer.bypassSecurityTrustResourceUrl('../assets/progress-bar/advanced.svg'))
@@ -311,10 +314,9 @@ var MyHammerConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     MyHammerConfig.prototype.buildHammer = function (element) {
-        var mc = new Hammer(element, {
+        return new Hammer(element, {
             touchAction: 'pan-y'
         });
-        return mc;
     };
     return MyHammerConfig;
 }(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["HammerGestureConfig"]));
