@@ -208,7 +208,7 @@ module.exports = "<div [ngClass]=\"theme\" #top>\r\n  <div class=\"skills\">\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".skills .container {\n  position: relative; }\n  .skills .container .centrer {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 90px; }\n  .skills .container h1 {\n    text-align: center;\n    font-size: 2em;\n    text-transform: uppercase;\n    font-weight: bold;\n    display: inline-block;\n    padding: 10px;\n    margin: 0; }\n  .skills .container h2 {\n    text-align: center;\n    margin-top: 20px;\n    display: flex;\n    justify-content: center;\n    margin-bottom: 30px; }\n  .skills .container h2 mat-icon {\n      margin-right: 10px;\n      width: 40px;\n      height: 40px; }\n  .skills .container .mat-tab-body-active {\n    overflow: hidden; }\n  .skills .container .mat-tab-label {\n    font-size: 1.6em; }\n  @media (max-width: 576px) {\n  .skills .centrer {\n    height: 70px; }\n  .skills h1 {\n    font-size: 1.4em; } }\n"
+module.exports = ".skills .container {\n  position: relative; }\n  .skills .container .centrer {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 90px; }\n  .skills .container h1 {\n    text-align: center;\n    font-size: 2em;\n    text-transform: uppercase;\n    font-weight: bold;\n    display: inline-block;\n    padding: 10px;\n    margin: 0; }\n  .skills .container h2 {\n    text-align: center;\n    margin-top: 20px;\n    display: flex;\n    justify-content: center;\n    margin-bottom: 30px; }\n  .skills .container h2 mat-icon {\n      margin-right: 10px;\n      width: 40px;\n      height: 40px; }\n  .skills .container .mat-tab-body-active {\n    overflow: hidden; }\n  .skills .container .mat-tab-label {\n    font-size: 1.6em; }\n  @media (max-width: 576px) {\n  .skills .centrer {\n    height: 70px; }\n  .skills .container h1 {\n    font-size: 1.3em; }\n  .skills .container h2 {\n    font-size: 1.2em; }\n    .skills .container h2 mat-icon {\n      width: 20px;\n      height: 20px; }\n  .skills .container h3 {\n    font-size: 1.1em; }\n  .skills .container .mat-tab-label {\n    font-size: 1em;\n    padding: 0;\n    margin: 0 -10px 0 -10px; } }\n"
 
 /***/ }),
 
@@ -366,7 +366,7 @@ module.exports = "<div [ngClass]=\"routeAnimationsElements\">\r\n  <mat-card *ng
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".row {\n  margin: 0;\n  margin-bottom: 20px; }\n\nh3 {\n  text-align: center; }\n\nh4 {\n  font-size: 1.4em;\n  text-decoration: underline; }\n\np {\n  font-size: 1.3em;\n  text-align: justify; }\n\n.mat-button {\n  font-size: 1.1em; }\n\n.skill-name {\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n@media (max-width: 992px) {\n  .skill-name {\n    margin-bottom: -20px; } }\n\nmat-chip {\n  cursor: pointer; }\n"
+module.exports = ".row {\n  margin: 0;\n  margin-bottom: 20px; }\n\nh3 {\n  text-align: center; }\n\nh4 {\n  font-size: 1.4em;\n  text-decoration: underline; }\n\np {\n  font-size: 1.3em;\n  text-align: justify; }\n\n.mat-button {\n  font-size: 1.1em; }\n\n.skill-name {\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n@media (max-width: 992px) {\n  .skill-name {\n    margin-bottom: -20px; } }\n\n@media (max-width: 576px) {\n  p {\n    font-size: 0.9em; } }\n\nmat-chip {\n  cursor: pointer; }\n"
 
 /***/ }),
 
