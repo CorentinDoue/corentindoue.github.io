@@ -734,23 +734,25 @@ __webpack_require__.r(__webpack_exports__);
 
 var SKILLS = {
     'language': [
-        new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('R', 1.5, 'Language and environment for statistical computing and graphics.', 'I used it in pratical works in courses of statistics and Big Data.', [], 'r.png'),
+        new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('R', 3, 'Language and environment for statistical computing and graphics.', 'I used it in pratical works in courses of statistics and Big Data.', [], 'r.png'),
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('C', 4, 'General-purpose, imperative computer programming language. It is a low-level language ' +
             'which should be compiled to machine instructions.', 'I used it a lot in pratical works in courses of C, Computer sciences and Big Data.', [], 'c.png'),
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Python', 4, 'Interpreted high-level programming language for general-purpose programming.', 'I used it a lot in pratical works in courses during my preparatory classes. ' +
             'I worked also with it during a three month internship to implement neural network.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Lesion segmentation by deep learning', 'stage_2a')], 'python.png'),
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Shell', 3.5, 'Script designed to be run by the shell command-line interpreter of Unix devices.', 'I used it a lot in pratical works in courses of Computer sciences and Big Data. ' +
             'I worked also with it during a three month internship to preprocess and move the datas.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Lesion segmentation by deep learning', 'stage_2a')], 'shell.png'),
-        new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('PHP', 4.5, 'Server-side scripting language designed for Web development, but also used as a' +
+        new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('PHP', 5, 'Server-side scripting language designed for Web development, but also used as a' +
             ' general-purpose programming language.', 'I learned it by myself with MOOCs to develop my first web site. Then I worked with ' +
             'it to develop the backend of other websites. I used it also when I learned the framework Symfony in courses.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Minesterstellar Website', 'minesterstellar'),
             new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('International mobility website', 'mobilite'),
-            new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Cercle Website', 'cercle')], 'php.png'),
+            new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Cercle Website', 'cercle'),
+            new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'php.png'),
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('SQL', 4, 'Domain-specific language used for programming and designed for managing data held in ' +
             'a relational database management system, or for stream processing in a relational data stream management system.', 'I learned it in preparatory classes and had courses on it at the École des Mines. ' +
-            'I used MySQL a lot to manage the data of my three first websites.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Minesterstellar Website', 'minesterstellar'),
+            'I used MySQL a lot to manage the data of my websites.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Minesterstellar Website', 'minesterstellar'),
             new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('International mobility website', 'mobilite'),
-            new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Cercle Website', 'cercle')], 'sql.png'),
+            new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Cercle Website', 'cercle'),
+            new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'sql.png'),
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Java', 5, 'General-purpose computer-programming language that is concurrent, class-based and object-oriented.', 'I learned it in Java courses and had lot of pratical works with it. I used also as backend' +
             ' language for a Computer sciences project.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Computer Science Course Project', 'project_majeure_info')], 'java.png'),
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('JavaScript', 4.5, 'High-level, interpreted programming language used in web development.', 'I learned it by myself with MOOCs to animate my first web site. I used also as frontend language ' +
@@ -758,9 +760,10 @@ var SKILLS = {
             new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('International mobility website', 'mobilite'),
             new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Cercle Website', 'cercle'),
             new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Computer Science Course Project', 'project_majeure_info'),
-            new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc')], 'js.png'),
-        new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('TypeScript', 2, 'Open-source programming language which is a strict syntactical superset of JavaScript.', 'I learned it by using Angular.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc')], 'ts.png'),
-        new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Matlab', 2.5, 'Multi-paradigm numerical computing environment and proprietary programming language.', 'I had pratical works with it in treatment of signals and images.', [], 'matlab.png')
+            new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc'),
+            new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'js.png'),
+        new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('TypeScript', 4, 'Open-source programming language which is a strict syntactical superset of JavaScript.', 'I learned it by using Angular.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc'), new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'ts.png'),
+        new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Matlab', 3, 'Multi-paradigm numerical computing environment and proprietary programming language.', 'I had pratical works with it in treatment of signals and images.', [], 'matlab.png')
     ],
     'web': {
         'Front-end': [
@@ -768,28 +771,35 @@ var SKILLS = {
                 new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('International mobility website', 'mobilite'),
                 new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Cercle Website', 'cercle'),
                 new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Computer Science Course Project', 'project_majeure_info'),
-                new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc')], 'html.png'),
+                new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc'),
+                new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'html.png'),
             new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('CSS', 4, 'Style sheet language used for describing the presentation of a document written in a markup language like HTML.', 'I learned it by myself with MOOCs to create my first web site. I used also for all the websites I did after.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Minesterstellar Website', 'minesterstellar'),
                 new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('International mobility website', 'mobilite'),
                 new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Cercle Website', 'cercle'),
                 new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Computer Science Course Project', 'project_majeure_info'),
-                new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc')], 'css.png'),
-            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('SCSS or Sass', 4, 'Preprocessor scripting language that is interpreted or compiled into CSS.', 'I learned it by myself on internet to properly use Bootstrap 4 and Material.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc')], 'scss.png'),
-            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Bootstrap', 4, 'Free and open-source front-end framework for designing websites and web applications.', 'I learned it by myself on internet to make quick responsive web sites.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Computer Science Course Project', 'project_majeure_info'), new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc')], 'bootstrap.png'),
-            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Material', 3, 'Design system – backed by open-source code – that helps teams to build digital experiences.', 'I learned it by myself on internet to build this web site.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc')], 'material.png'),
+                new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc'),
+                new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'css.png'),
+            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('SCSS or Sass', 4, 'Preprocessor scripting language that is interpreted or compiled into CSS.', 'I learned it by myself on internet to properly use Bootstrap 4 and Material.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc'), new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'scss.png'),
+            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Bootstrap', 4, 'Free and open-source front-end framework for designing websites and web applications.', 'I learned it by myself on internet to make quick responsive web sites.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Computer Science Course Project', 'project_majeure_info'), new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc'),
+                new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'bootstrap.png'),
+            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Material', 3, 'Design system – backed by open-source code – that helps teams to build digital experiences.', 'I learned it by myself on internet to build this web site. ' +
+                'I used it after for the web site I developed to organize the booking of the room of my student house.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc'), new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'material.png'),
             new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('AngularJS', 4, 'JavaScript-based open-source front-end web application framework.', 'I learned it by myself with MOOCs to use it as frontend for my second and third websites.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('International mobility website', 'mobilite'), new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Cercle Website', 'cercle')], 'angular.png'),
             new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Vue.js', 3, 'Open-source JavaScript framework for building user interfaces.', 'I learned it in Computer sciences courses.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Computer Science Course Project', 'project_majeure_info')], 'vuejs.png'),
-            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Angular', 3, 'TypeScript-based open-source front-end web application framework.', 'I learned it by myself on internet to build this web site.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc')], 'angular.png'),
+            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Angular', 4, 'TypeScript-based open-source front-end web application framework.', 'I learned it by myself on internet to build this web site. ' +
+                'I used it after for the frontend of the web site I developed to organize the booking of the room of my student house.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc'), new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'angular.png'),
             new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Android', 2.5, 'Mobile operating system designed primarily for touchscreen mobile devices such as smartphones and tablets.', 'I learned it in Computer sciences courses.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Computer Science Course Project', 'project_majeure_info')], 'android.png')
         ],
         'Back-end': [
             new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Spring', 3, 'Java framework to develop web applications.', 'I learned it in Computer sciences courses.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Computer Science Course Project', 'project_majeure_info')], 'spring.png'),
-            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Symfony', 3, 'PHP web application framework.', 'I learned it in Computer sciences courses.', [], 'symfony.png')
+            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Symfony', 4, 'PHP web application framework.', 'I learned it in Computer sciences courses. ' +
+                'I used it also for the backend of the web site I made to organize the booking of the room of my student house.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'symfony.png')
         ],
         'Managers': [
             new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Gradle', 4, 'Open-source build automation system mostly used with java.', 'I learned it in Computer sciences courses with Spring and Android.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Computer Science Course Project', 'project_majeure_info')], 'gradle.png'),
-            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Composer', 3.5, 'Application-level package manager for the PHP programming language.', 'I learned it in Computer sciences courses with Symfony.', [], 'composer.png'),
-            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('NPM', 3.5, 'Package manager for the JavaScript programming language.', 'I learned it by using Angular.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc')], 'npm.png')
+            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Composer', 3.5, 'Application-level package manager for the PHP programming language.', 'I learned it in Computer sciences courses with Symfony. ' +
+                'I used it also with Symfony for the web site I made to organize the booking of the room of my student house.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'composer.png'),
+            new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('NPM', 3.5, 'Package manager for the JavaScript programming language.', 'I learned it by using Angular.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Personal Website', 'spc'), new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Booking Room Site', 'brme')], 'npm.png')
         ]
     },
     'ia': [
@@ -797,12 +807,16 @@ var SKILLS = {
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Keras', 4.5, 'Open source neural network library written in Python.', 'I used it with Tensorflow backend during my three month internship à Erasmus MC.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Lesion segmentation by deep learning', 'stage_2a')], 'keras.png')
     ],
     'graphical': [
-        new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Photoshop', 2, 'Raster graphics editor.', 'I used it for personnal stuffs or to preprocess images I want to display on my websites.', [], 'photoshop.png'),
+        new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Photoshop', 2, 'Raster graphics editor.', 'I used it for personnal stuffs, to preprocess images I want to display on my websites and to create some placards for events.', [], 'photoshop.png'),
+        new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Gimp', 1, 'Open source graphics editor.', 'I used it for personnal stuffs or to preprocess images I want to display on my websites.', [], 'gimp.png'),
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Illustrator', 1, 'Vector graphics editor.', 'I used it for personnal stuffs, to edit associations logos and to preprocess logos I want display on my websites.', [], 'illustrator.png'),
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Blender', 3, 'Professional, free and open-source 3D computer graphics software.', 'I used it to make some 3D annimations for an association film.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Minesterstellar Film', 'film_campagne')], 'blender.png')
     ],
     'other': [
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Git', 3.5, 'Version control system for tracking changes in computer files and coordinating work.', 'I learned it in Computer sciences courses and work with it since.', [], 'git.png'),
+        new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Docker', 2, 'Computer program that performs operating-system-level virtualization, also known as "containerization". ' +
+            'Docker is used to run software packages called "containers". ' +
+            'Containers are isolated from each other and bundle their own tools, libraries and configuration files', 'I used it during my research internship to post my code on the platform of a Artificial Intelligence challenge.', [new _project__WEBPACK_IMPORTED_MODULE_1__["Link"]('Deep Learning Internship', 'stage_2a')], 'docker.png'),
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Linux', 4, 'Free and open-source software operating systems.', 'I work a lot on ubuntu.', [], 'linux.png'),
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Windows', 4.5, 'Graphical operating system families developed by Microsoft.', 'I use Windows since I was a kid.', [], 'windows.png'),
         new _skill__WEBPACK_IMPORTED_MODULE_0__["Skill"]('Microsoft Office Suite', 4, 'Family of client software and services developed by Microsoft.', 'I always use Word, Powerpoint and Excel for my personal and scholar projects.', [], 'office.png')

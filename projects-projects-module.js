@@ -223,7 +223,7 @@ var ProjectsHomeComponent = /** @class */ (function () {
                             behavior: 'smooth',
                             block: 'start'
                         });
-                    }, 300);
+                    }, 600);
                 }
                 found = true;
             }
@@ -384,7 +384,33 @@ __webpack_require__.r(__webpack_exports__);
 
 // language=HTML
 var PROJECTS = [
-    new _project__WEBPACK_IMPORTED_MODULE_0__["Project"]('Deep learning internship', 'stage_2a', 'ia', 'june 2018', 'now', [
+    new _project__WEBPACK_IMPORTED_MODULE_0__["Project"]('Booking Room Website', 'brme', 'web', 'august 2018', 'october 2018', [
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('Angular', 'front', 'angular', 'https://angular.io/'),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('Symfony', 'back', 'symfony', 'https://symfony.com/')
+    ], [
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('Angular', 'front', 'angular', 'https://angular.io/'),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('Angular Material', 'web', 'material', 'https://material.angular.io/'),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('Bootstrap', 'web', 'bootstrap', 'https://getbootstrap.com/'),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('Type Script', 'web', 'ts', 'https://www.typescriptlang.org/'),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('Html', 'code', 'html', 'https://en.wikipedia.org/wiki/HTML'),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('SCSS', 'code', 'scss', 'https://sass-lang.com/'),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('Symfony', 'back', 'symfony', 'https://symfony.com/'),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('API Platform', 'back', 'apiplatform', 'https://api-platform.com/')
+    ], 'I lived in the student house of my school for my two first years of engineering school. ' +
+        'In this this student house, we were 300 students and we could use multiple services such as a tennis court, ' +
+        'a music room, a meeting room or two barbecues. In order to share those rooms between every residents, ' +
+        'people used to send mails to book it. The mailing was very busy with these mails which bother most of the students.<br>' +
+        'That is why the director of the student house hire me to develop a website to manage the booking of the room of the student house.', 'I created a frontend in Angular which call a Symfony API. ' +
+        'I used API Platform, which is a Bundle of Symfony, to develop the API easily. I linked the API to a MySQL database.<br>' +
+        'I dealt with security because I had to manage secured accounts and communication between the frontend and the API. ' +
+        'I use a token based authentication. The backend part of the authentication is manage by the LexikJWTAuthenticationBundle, ' +
+        'I just had to implement the storage of the token in the frontend and put it in the header of each HTTP request.<br>' +
+        'To simplify the work of the administration of the student house, the management of the accounts is automated. ' +
+        'They just have to provide an Excel with the information of the all the residents of the student house. ' +
+        'After uploading it, the backend parse the Excel, create an account, ' +
+        'generate a random password and send it by email to each new resident. ' +
+        'Then all the users which don\'t appear on the Excel are deleted.', [], new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('Booking Room Website', 'http://reservationcome.me-mines-saint-etienne.org/')),
+    new _project__WEBPACK_IMPORTED_MODULE_0__["Project"]('Deep learning internship', 'stage_2a', 'ia', 'june 2018', 'august 2018', [
         new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('Keras', null, 'keras', 'https://keras.io/'),
         new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('Tensorflow', 'AI', 'tensorflow', 'https://www.tensorflow.org/')
     ], [
@@ -396,19 +422,36 @@ var PROJECTS = [
         'I am doing mine at Erasmus MC at Rotterdam (Netherlands). ' +
         'It is a research internship I am doing in pair with a colleague of the ' +
         '<a href="https://www.mines-stetienne.fr/">École des Mines de Saint-Étienne</a>, ' +
-        '<a href="https://www.linkedin.com/in/robin-camarasa-893726158">Robin Camarasa</a>, and this is our mission.', 'We first segmented  white matter lesions from brain MRIs thank to deep learning. ' +
+        '<a href="https://www.linkedin.com/in/robin-camarasa-893726158">Robin Camarasa</a>, and this is our mission.', 'We first segmented White Matter Hyperintensities from brain MRIs thank to deep learning. ' +
+        'These are common lesions of the white matter of the brain which are easily locatable on a brain scan. ' +
         'We used a new method found in a research article which consist in using recurrent neural networks on 3D images ' +
-        'by using one of spatial dimensions as the temporal dimension of the recurrent neural network. <br>' +
-        'We implemented this method thank to Keras, a Python library working on top of TensorFlow (the machine learning framework of Google).' +
-        ' Then we trained our network on the data set of a former white matter lesion segmentation challenge and ' +
-        'we had results as good as the bests of the challenge.<br> We are now trying to apply our network on a currently active challenge. ' +
-        'We have to segment eight brain parts including white matter lesion. We will submit our work before the end of the internship. ' +
-        'We will also use our final network on the brain MRI data set of Erasmus MC to segment automatically the white matter lesions. ' +
-        'Those segmentations will be used by our internship supervisor for a bigger project after our internship.', [
+        'by using one of spatial dimensions as the temporal dimension of a typical recurrent neural network. <br><br>' +
+        'We implemented this method thank to Keras, a Python library working on top of TensorFlow ' +
+        '(the deep learning framework of Google).<br><br>' +
+        'We trained our network on the data set of a former white matter lesion segmentation international challenge. ' +
+        'The data set was constituted of 60 patients with two type of MRI for each one. ' +
+        'We finally submitted our code to the challenge, it was evaluated on the training set and 20 unknown additional patients. ' +
+        'Our results was pretty good, we were classed 3rd out of 25. ' +
+        'You can find the results on the website of the first challenge (link bellow), our team name is Coroflo.<br><br>' +
+        'As the network worked well, we applied it to an other challenge. This one was about segmenting the whole brain into eights classes. ' +
+        'The major difficulty was we had a data set composed of only 7 patients. ' +
+        'The results on this data set after cross validation was pretty good but the risk of overfitting was very high. ' +
+        'We also submitted our code to the challenge, the results were revealed the 16 september 2018 at the MICCAI of Granada (Spain). ' +
+        'The test set of the challenge was on 20 other patients. ' +
+        'We don\'t really know the detail of our results but we were only 8th out of 22. ' +
+        'So we probably overfit too much the 7 patients of the training set compare to the seven better team. ' +
+        'You can find the results on the website of the second challenge (link bellow), our team name is still Coroflo.<br><br>' +
+        'Our final network on White Matter Hyperintensities will be used by our internship supervisor for a bigger project. ' +
+        'He will segment the white matter lesions on the normal aging data set of Erasmus MC ' +
+        'and a data set of people who had strokes in Boston. ' +
+        'The aim is to find a correlation between the White Matter Hyperintensities ans the risk of strokes.<br><br>' +
+        'You can find below the description of our methods, these are what we submitted with our code to both challenges.', [
         new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('Erasmus MC', 'https://www.erasmusmc.nl/'),
-        new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('First challenge', 'http://wmh.isi.uu.nl/'),
-        new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('Second challenge', 'http://mrbrains18.isi.uu.nl/')
-    ], null),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('First challenge web site', 'http://wmh.isi.uu.nl/'),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('Description of our method for the first challenge ', 'assets/description_wmh.pdf'),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('Second challenge web site', 'http://mrbrains18.isi.uu.nl/'),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('Description of our method for the second challenge ', 'assets/description_mrbrain.pdf'),
+    ], null, 'stage_2a_illustration.png'),
     new _project__WEBPACK_IMPORTED_MODULE_0__["Project"]('Personal Website', 'spc', 'web', 'june 2018', 'august 2018', [
         new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('Angular', null, 'angular', 'https://angular.io/'),
     ], [
@@ -502,6 +545,7 @@ var PROJECTS = [
         new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('Front android', 'https://github.com/EMSEMajorProject/major_project_front_android_phillipshue_manager'),
         new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('API Spring', ' https://github.com/EMSEMajorProject/major_project_api_phillipshue_manager'),
         new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('Cloud MQTT', 'https://www.cloudmqtt.com/'),
+        new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('Project description by Robin Camarasa', '/assets/projet_info.pdf'),
     ], new _project__WEBPACK_IMPORTED_MODULE_0__["Link"]('Github of the project', 'https://github.com/EMSEMajorProject'), 'schema_project_majeur_info.png'),
     new _project__WEBPACK_IMPORTED_MODULE_0__["Project"]('Cercle Website', 'cercle', 'web', 'august 2017', 'october 2017', [
         new _project__WEBPACK_IMPORTED_MODULE_0__["Label"]('AngularJS', 'front', 'angular', 'https://angularjs.org/'),
